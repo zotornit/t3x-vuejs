@@ -1,0 +1,60 @@
+{
+  "name": "zotornit/vuejs",
+  "authors": [
+    {
+      "name": "Thomas Pronold",
+      "role": "Developer",
+      "homepage": "https://zotorn.de",
+      "email": "tp@zotorn.de"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "description": "VUE.JS Framework for TYPO3 Backend Modules",
+  "homepage": "https://github.com/ZOTORN/t3x_vuejs",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "typo3",
+    "vue",
+    "vuejs",
+    "vue.js",
+    "requirejs",
+    "zotornit",
+    "zotorn"
+  ],
+  "support": {
+    "issues": "https://github.com/ZOTORN/t3x_vuejs/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "VUEJS\\Vuejs\\": "Classes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "VUEJS\\Vuejs\\Tests\\": "Tests/"
+    }
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin"
+  },
+  "require-dev": {
+    "typo3/cms-core": "^9.5",
+    "typo3/cms-frontend": "^9.5",
+    "typo3/cms-install": "^9.5",
+    "typo3/cms-about": "^9.5",
+    "typo3/testing-framework": "^4.11.0"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+    ]
+  },
+  "extra": {
+    "typo3/cms": {
+      "app-dir": ".Build",
+      "web-dir": ".Build/Web",
+      "extension-key": "vuejs"
+    }
+  }
+}
