@@ -1,1 +1,4 @@
 .idea/
+
+# ignore generated documentation
+*GENERATED*
