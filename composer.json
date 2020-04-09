@@ -10,7 +10,7 @@
   ],
   "type": "typo3-cms-extension",
   "description": "VUE.JS Framework for TYPO3 Backend Modules",
-  "homepage": "https://github.com/ZOTORN/t3x_vuejs",
+  "homepage": "https://github.com/zotornit/t3x-vuejs",
   "license": "GPL-2.0-or-later",
   "keywords": [
     "typo3",
@@ -22,7 +22,7 @@
     "zotorn"
   ],
   "support": {
-    "issues": "https://github.com/ZOTORN/t3x_vuejs/issues"
+    "issues": "https://github.com/zotornit/t3x-vuejs/issues"
   },
   "autoload": {
     "psr-4": {
