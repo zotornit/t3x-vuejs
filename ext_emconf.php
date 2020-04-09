@@ -10,7 +10,7 @@ $EM_CONF['vuejs'] = array(
     'state' => 'stable',
     'uploadfolder' => false,
     'clearCacheOnLoad' => false,
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'constraints' =>
         array(
             'depends' =>
