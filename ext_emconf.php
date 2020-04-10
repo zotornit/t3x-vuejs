@@ -22,5 +22,11 @@ $EM_CONF['vuejs'] = array(
             'suggests' =>
                 array(),
         ),
+
+    'autoload' => [
+        'psr-4' => [
+            'VUEJS\\Vuejs\\' => 'Classes'
+        ]
+    ]
 );
 
