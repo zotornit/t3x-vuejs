@@ -12,7 +12,7 @@
 .. MATCH EM_CONF
 
 =============================================================
-VUE.JS Framework for TYPO3 Backend Modules
+Vue.js Framework for TYPO3 Backend Modules
 =============================================================
 
 :Extension:
@@ -45,7 +45,7 @@ VUE.JS Framework for TYPO3 Backend Modules
 
 .. MATCH EM_CONF
 
-VUE.JS JavaScript framework for TYPO3 Backend Modules
+Vue.js JavaScript framework for TYPO3 Backend Modules
 
 
 .. toctree::

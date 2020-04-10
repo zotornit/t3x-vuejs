@@ -18,7 +18,7 @@ class VueBackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     protected $defaultViewObjectName = \TYPO3\CMS\Backend\View\BackendTemplateView::class;
 
     /**
-     * Load VUE.JS
+     * Load Vue.js
      *
      * @param ViewInterface $view
      * @return void

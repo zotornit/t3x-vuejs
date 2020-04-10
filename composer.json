@@ -9,7 +9,7 @@
     }
   ],
   "type": "typo3-cms-extension",
-  "description": "VUE.JS Framework for TYPO3 Backend Modules",
+  "description": "Vue.js Framework for TYPO3 Backend Modules",
   "homepage": "https://github.com/zotornit/t3x-vuejs",
   "license": "GPL-2.0-or-later",
   "keywords": [
