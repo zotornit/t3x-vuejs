@@ -25,10 +25,10 @@ Vue.js Framework for TYPO3 Backend Modules
    en
 
 :Authors:
-   Thomas Pronold
+   Thomas Pronold | zotorn.de
 
 :Email:
-   info@zotorn.de
+   tp@zotorn.de
 
 :Website:
    https://zotorn.de
