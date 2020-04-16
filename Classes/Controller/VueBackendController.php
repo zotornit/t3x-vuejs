@@ -29,9 +29,6 @@ class VueBackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
             return;
         }
 
-        /** @var BackendTemplateView $view */
-        parent::initializeView($view);
-
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
 
         if (isset($GLOBALS['TYPO3_CONF_VARS']['BE']['debug']) && $GLOBALS['TYPO3_CONF_VARS']['BE']['debug']) {
