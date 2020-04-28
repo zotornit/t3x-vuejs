@@ -15,7 +15,7 @@ $EM_CONF['vuejs'] = array(
         array(
             'depends' =>
                 array(
-                    'typo3' => '9.5.0-10.5.99',
+                    'typo3' => '9.5.0-10.4.99',
                 ),
             'conflicts' =>
                 array(),
