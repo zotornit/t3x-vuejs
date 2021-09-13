@@ -9,9 +9,9 @@ pipeline {
             steps {
                 echo "Building t3x-vuejs:$TAG_NAME"
                 script {
-                    sh 'git log -1 --pretty=%b > /tmp/commentfile'
-                    sh 'docker run -i --rm -v $WORKSPACE:/extension zotornit/t3ter-upload upload user=$TER_ACCOUNT_USR password=$TER_ACCOUNT_PSW upload_comment=\\"$(cat /tmp/commentfile)\\"'
-                    sh 'rm /tmp/commentfile'
+//                     sh 'git log -1 --pretty=%b > /tmp/commentfile'
+                    sh 'docker run -i --rm -v $WORKSPACE:/extension zotornit/t3ter-upload upload user=$TER_ACCOUNT_USR password=$TER_ACCOUNT_PSW upload_comment=-'
+//                     sh 'rm /tmp/commentfile'
                 }
             }
         }
