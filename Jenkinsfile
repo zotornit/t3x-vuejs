@@ -10,9 +10,7 @@ pipeline {
                 echo "Building t3x-vuejs:$TAG_NAME"
                 script {
                     sh 'git log -1 --pretty=%b > /tmp/commentfile'
-                    sh '[ -s file.name ] || echo "no changes" > /tmp/commentfile'
-//                     sh 'docker run -i --rm -v /tmp/commentfile:/commentfile -v $WORKSPACE:/extension zotornit/t3ter-upload upload user=$TER_ACCOUNT_USR password=$TER_ACCOUNT_PSW upload_comment_file=/commentfile zotornit/t3ter-upload'
-                    sh 'docker run -i --rm -v /tmp/commentfile:/commentfile -v $WORKSPACE:/extension zotornit/t3ter-upload upload user=$TER_ACCOUNT_USR password=$TER_ACCOUNT_PSW upload_comment_file=/commentfile'
+                    sh 'docker run -i --rm -v $WORKSPACE:/extension zotornit/t3ter-upload upload user=$TER_ACCOUNT_USR password=$TER_ACCOUNT_PSW upload_comment=\\"$(cat /tmp/commentfile)\\"'
                     sh 'rm /tmp/commentfile'
                 }
             }
