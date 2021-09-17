@@ -44,7 +44,7 @@
     "typo3/cms-install": "^9.5",
     "typo3/cms-about": "^9.5",
     "typo3/testing-framework": "^4.11.0",
-    "typo3/tailor": ""
+    "typo3/tailor": "*"
   },
   "require": {
     "typo3/cms-core": "^9.5 || ^10.4"
@@ -57,9 +57,9 @@
       "@extension-create-libs",
       "rm -rf .devbox",
       "rm -rf Tests/",
-      "rm .gitignore",
-      "rm .scrutinizer.yml",
-      "rm disabled.travis.yml"
+      "rm -f .gitignore",
+      "rm -f .scrutinizer.yml",
+      "rm -f disabled.travis.yml"
     ]
   },
   "extra": {
