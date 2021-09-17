@@ -5,16 +5,15 @@ pipeline {
             when { buildingTag() }
             environment {
                 TER_ACCESS_TOKEN = credentials('typo3-zotornit-ter-access-token')
+                DOCKER_REPOSITORY = credentials('robo-jenkins-docker-publish')
             }
             steps {
                 echo "Building t3x-vuejs:$TAG_NAME"
                 script {
-                    docker.withRegistry('https://registry9.de:5000', 'robo-jenkins-docker-publish') {
-                        docker
-                            .image('registry9.de:5000/zotornit-typo3-terupload:latest')
-                            .withRun('-v $WORKSPACE:/extension  -e TER_ACCESS_TOKEN=$TER_ACCESS_TOKEN -e TAG_NAME=$TAG_NAME') { c ->
-                            }
-                    }
+                    sh 'docker login -u $DOCKER_REPOSITORY_USR -p $DOCKER_REPOSITORY_PSW registry9.de:5000/zotornit-typo3-terupload:latest'
+                    sh 'docker pull registry9.de:5000/zotornit-typo3-terupload:latest'
+                    sh 'docker run -i --rm -v $PWD:/extension -e TER_ACCESS_TOKEN=$TER_ACCESS_TOKEN -e TAG_NAME=$TAG_NAME registry9.de:5000/zotornit-typo3-terupload:latest'
+
                 }
             }
         }
