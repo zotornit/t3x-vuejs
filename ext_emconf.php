@@ -10,12 +10,12 @@ $EM_CONF['vuejs'] = array(
     'state' => 'stable',
     'uploadfolder' => false,
     'clearCacheOnLoad' => false,
-    'version' => '1.0.10',
+    'version' => '1.1.0',
     'constraints' =>
         array(
             'depends' =>
                 array(
-                    'typo3' => '9.5.0-10.4.99',
+                    'typo3' => '10.4.0-11.5.99',
                 ),
             'conflicts' =>
                 array(),
