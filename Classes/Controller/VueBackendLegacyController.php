@@ -3,23 +3,21 @@
 namespace VUEJS\Vuejs\Controller;
 
 
-use TYPO3\CMS\Backend\Template\ModuleTemplate;
-use TYPO3\CMS\Backend\Template\ModuleTemplateFactory;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
-class VueBackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+
+// only to support typo3 10 for a while
+
+class VueBackendLegacyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
-    protected ModuleTemplateFactory $moduleTemplateFactory;
-    protected ModuleTemplate $moduleTemplate;
-
-    public function __construct(ModuleTemplateFactory $moduleTemplateFactory, ModuleTemplate $moduleTemplate = null)
-    {
-        $this->moduleTemplateFactory = $moduleTemplateFactory;
-        $this->moduleTemplate = $moduleTemplate ?? GeneralUtility::makeInstance(ModuleTemplate::class);
-    }
+    /**
+     * Backend Template Container
+     *
+     * @var string
+     */
+    protected $defaultViewObjectName = \TYPO3\CMS\Backend\View\BackendTemplateView::class;
 
     /**
      * Load Vue.js
